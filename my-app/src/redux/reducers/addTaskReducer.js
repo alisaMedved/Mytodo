@@ -25,7 +25,7 @@ const addTaskReducer = (state = initialState, action) => {
       return {
         ...state,
         tasks: state.tasks.map(el => {
-          return el.id === action.taskId ? { ...el, isDone: true } : el;
+          return el.id === action.taskId ? { ...el, isDone: action.isDone } : el;
         })
       };
     }
@@ -34,5 +34,6 @@ const addTaskReducer = (state = initialState, action) => {
     }
   }
 };
+
 
 export default addTaskReducer;

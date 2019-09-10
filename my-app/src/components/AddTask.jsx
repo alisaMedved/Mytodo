@@ -23,11 +23,10 @@ const AddTask = props => {
     <form onSubmit={handleSubmit}>
       <TextField
         id="standard-name"
-        label="Name"
+        label="New Task"
         margin="normal"
         value={values.newTask}
         onChange={handleChange('newTask')}
-        placeholder={'new task'}
       />
       <Button type="submit" variant="contained" color="primary">
         Add task
