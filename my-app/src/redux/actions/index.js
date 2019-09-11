@@ -1,5 +1,5 @@
-export const setTask = (newTask, taskId) => ({
-  type: 'SET_TASK',
+export const addTask = (newTask, taskId) => ({
+  type: 'ADD_TASK',
   newTask,
   taskId
 });

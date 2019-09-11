@@ -1,23 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { deleteTask, updateTask } from '../redux/actions';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-const TaskList = ({ tasks, deleteTask, updateTask }) => {
-  const handleDelete = taskId => {
-    deleteTask(taskId);
-  };
-
-  const handleChange = name => event => {
-    updateTask(name, event.target.checked);
-    console.log(event.target.checked);
-  };
-
+const TaskList = ({ tasks, handleDelete, handleChange }) => {
   return (
     <div>
       <FormControl component="fieldset">
@@ -37,7 +26,8 @@ const TaskList = ({ tasks, deleteTask, updateTask }) => {
               />
               <IconButton
                 aria-label="delete"
-                onClick={() => handleDelete(t.id)}>
+                onClick={() => handleDelete(t.id)}
+              >
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </div>
@@ -48,13 +38,4 @@ const TaskList = ({ tasks, deleteTask, updateTask }) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    tasks: state.addTask.tasks
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  { deleteTask, updateTask }
-)(TaskList);
+export default TaskList;

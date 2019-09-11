@@ -4,7 +4,7 @@ const initialState = {
 
 const addTaskReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_TASK': {
+    case 'ADD_TASK': {
       return {
         ...state,
         tasks: [
