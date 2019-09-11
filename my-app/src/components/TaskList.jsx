@@ -13,15 +13,10 @@ const TaskList = ({ tasks, deleteTask, updateTask }) => {
     deleteTask(taskId);
   };
 
-  const [state, setState] = React.useState({
-    gilad: true
-  });
-
   const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
+    updateTask(name, event.target.checked);
+    console.log(event.target.checked);
   };
-
-  const { gilad } = state;
 
   return (
     <div>
@@ -33,17 +28,16 @@ const TaskList = ({ tasks, deleteTask, updateTask }) => {
                 key={i}
                 control={
                   <Checkbox
-                    checked={gilad}
-                    onChange={handleChange('gilad')}
-                    value="gilad"
+                    checked={t.isDone}
+                    onChange={handleChange(t.id)}
+                    value={t.id}
                   />
                 }
                 label={t.bodyTask}
               />
               <IconButton
                 aria-label="delete"
-                onClick={() => handleDelete(t.id)}
-              >
+                onClick={() => handleDelete(t.id)}>
                 <DeleteIcon fontSize="small" />
               </IconButton>
             </div>
