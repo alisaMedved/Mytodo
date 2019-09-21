@@ -39,3 +39,5 @@ const TaskList = ({ tasks, handleDelete, handleChange }) => {
 };
 
 export default TaskList;
+
+// style={{ textDecoration: 'line-through' }}

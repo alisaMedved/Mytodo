@@ -1,6 +1,6 @@
 import React from 'react';
 import AddTask from '../AddTask';
-import TaskList from '../TaskList';
+import TasksList from '../TaskList1';
 import { connect } from 'react-redux';
 import {addTask, deleteTask, updateTask} from '../../redux/actions';
 let uuidv4 = require('uuid/v4');
@@ -18,6 +18,7 @@ const TodoContainer = props => {
 
   const handleAddTask = event => {
     props.addTask(values.newTask, uuidv4());
+    setValues({newTask: ''});
     event.preventDefault();
   };
 
@@ -37,7 +38,7 @@ const TodoContainer = props => {
         handleChange={handleInputTask}
         values={values}
       />
-      <TaskList
+      <TasksList
         handleDelete={handleDeleteTask}
         handleChange={IsDoneTask}
         tasks={props.tasks}
