@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88690405-87d0-4465-81ea-7797b8f1baa5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddTask.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TaskList1.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TasksList.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/theme/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddTask.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/containers/TodoContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/containers/TodoContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/addTaskReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/addTaskReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-    </list>
+    <list default="true" id="88690405-87d0-4465-81ea-7797b8f1baa5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -172,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/components/TaskList1.jsx" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/theme/theme.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -192,6 +156,11 @@
             <path>
               <item name="Mytodo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mytodo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mytodo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mytodo" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +238,7 @@
       <workItem from="1568647020431" duration="3727000" />
       <workItem from="1569015194476" duration="6872000" />
       <workItem from="1569068797702" duration="6275000" />
-      <workItem from="1569094752371" duration="460000" />
+      <workItem from="1569094752371" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="промежуточный коммит">
       <created>1568146443089</created>
@@ -299,11 +268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568190858004</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added styles">
+      <created>1569095331988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569095331988</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52278000" />
+    <option name="totallyTimeSpent" value="52944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,7 +292,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="677" y="216" width="1548" height="1155" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12901114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -327,7 +302,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32925683" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32925683" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32925683" />
@@ -392,13 +367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -503,6 +471,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
