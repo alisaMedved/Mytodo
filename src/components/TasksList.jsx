@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
@@ -15,9 +15,10 @@ import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 const ColorCheckbox = withStyles({
   root: {
+    padding: 2,
     color: 'grey',
     '&$checked': {
-      color: '#FFC600'
+      color: '#6997D3'
     }
   },
   checked: {}
@@ -25,12 +26,12 @@ const ColorCheckbox = withStyles({
 
 const useStyles = makeStyles(theme => ({
   tasksListContainer: {
-    width: 650
+    width: 400
   },
   tasksListRoot: {
-    marginTop: 50,
-    marginBottom: 50,
-    width: 550,
+    marginTop: 30,
+    marginBottom: 30,
+    width: 250,
     marginRight: 'auto',
     marginLeft: 'auto',
     backgroundColor: theme.palette.background.paper
@@ -38,18 +39,21 @@ const useStyles = makeStyles(theme => ({
   tasksListItem: {
     width: '100%',
     display: 'flex',
-    borderBottom: '1px solid #c0c0c0',
+    borderBottom: '1px solid #c0c0c0'
   },
   Done: {
-    textDecoration: 'line-through',
-    fontSize: theme.typography.fontSize
+    fontSize: theme.typography.fontSize,
+    textDecoration: 'line-through'
   },
   NotDone: {
     textDecoration: 'none',
-    fontSize: theme.typography.fontSize
+    fontSize: theme.typography.fontSize,
   },
   ButtonIcon: {
     fontSize: theme.typography.ButtonIcon.fontSize
+  },
+  listButs: {
+    padding: 2
   }
 }));
 
@@ -70,8 +74,18 @@ const TasksList = ({ tasks, handleDelete, handleChange }) => {
               <FormControlLabel
                 control={
                   <ColorCheckbox
-                    icon={<CheckBoxOutlineBlankIcon fontSize="default" className={classes.ButtonIcon}/>}
-                    checkedIcon={<CheckBoxIcon fontSize="default" className={classes.ButtonIcon}/>}
+                    icon={
+                      <CheckBoxOutlineBlankIcon
+                        fontSize="default"
+                        className={classes.ButtonIcon}
+                      />
+                    }
+                    checkedIcon={
+                      <CheckBoxIcon
+                        fontSize="default"
+                        className={classes.ButtonIcon}
+                      />
+                    }
                     checked={task.isDone}
                     onChange={handleChange(task.id)}
                     value={task.id}
@@ -87,9 +101,7 @@ const TasksList = ({ tasks, handleDelete, handleChange }) => {
                 )}
               />
               <ListItemSecondaryAction>
-                <IconButton
-                  onClick={() => handleDelete(task.id)}
-                >
+                <IconButton onClick={() => handleDelete(task.id)} className={classes.listButs}>
                   <DeleteIcon
                     className={classes.ButtonIcon}
                     fontSize="default"
@@ -104,6 +116,4 @@ const TasksList = ({ tasks, handleDelete, handleChange }) => {
   );
 };
 
-
 export default TasksList;
-

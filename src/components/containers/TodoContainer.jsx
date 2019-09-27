@@ -1,6 +1,6 @@
 import React from 'react';
 import AddTask from '../AddTask';
-import TasksList from '../TaskList1';
+import TasksList from '../TasksList';
 import { connect } from 'react-redux';
 import { addTask, deleteTask, updateTask } from '../../redux/actions';
 import styles from './TodoContainer.module.css';
@@ -50,7 +50,7 @@ const TodoContainer = props => {
 
 const mapStateToProps = state => {
   return {
-    tasks: state.addTask.tasks
+    tasks: state.tasks.tasks
   };
 };
 

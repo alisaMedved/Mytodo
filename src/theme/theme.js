@@ -2,17 +2,14 @@ import { createMuiTheme } from '@material-ui/core';
 
 const theme = createMuiTheme({
   typography: {
-    fontSize: 25,
+    fontSize: 18,
     ButtonIcon: {
-      fontSize: 20
+      fontSize: 15
+    },
+    inputLabelAdd: {
+      fontSize: 12
     }
   }
 });
 
 export default theme;
-
-
-// }pallete: {
-//   color: #fff;
-//   background-color: #1976d2;
-//   hover: rgb(17, 82, 147);

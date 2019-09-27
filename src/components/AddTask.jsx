@@ -4,7 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
-import { palette } from '@material-ui/system';
+
 
 const useStyles = makeStyles(theme => ({
   addTaskContainer: {
@@ -16,23 +16,23 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap'
   },
   addTaskFormControl: {
-    width: 400,
+    width: 200,
     marginRight: 20
   },
   inputLabelAdd: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    fontSize: theme.typography.fontSize
+    fontSize: theme.typography.inputLabelAdd.fontSize
   },
   inputAdd: {
     fontSize: theme.typography.fontSize
   },
   addTaskBut: {
-    fontSize: 18,
-    width: 130,
-    height: 30,
+    fontSize: 10,
+    width: 50,
+    height: 20,
     marginTop: 'auto',
-    padding: 0
+    padding: '0 5px'
   }
 }));
 

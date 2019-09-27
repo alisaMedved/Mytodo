@@ -6,7 +6,7 @@ import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import theme from './components/theme/theme';
+import theme from './theme/theme';
 
 const App = () => {
   return (
