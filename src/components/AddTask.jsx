@@ -1,59 +1,70 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import { palette } from '@material-ui/system';
 
 const useStyles = makeStyles(theme => ({
-  container: {
+  addTaskContainer: {
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  addTaskForm: {
     display: 'flex',
     flexWrap: 'wrap'
   },
-  textField: {
+  addTaskFormControl: {
+    width: 400,
+    marginRight: 20
+  },
+  inputLabelAdd: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 200
+    fontSize: theme.typography.fontSize
+  },
+  inputAdd: {
+    fontSize: theme.typography.fontSize
+  },
+  addTaskBut: {
+    fontSize: 18,
+    width: 130,
+    height: 30,
+    marginTop: 'auto',
+    padding: 0
   }
 }));
 
 const AddTask = ({ handleSubmit, handleChange, values }) => {
   const classes = useStyles();
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={classes.container}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField
-        className={classes.textField}
-        id="standard-name"
-        label="New Task"
-        margin="normal"
-        value={values.newTask}
-        onChange={handleChange('newTask')}
-      />
-      <Fab
-        color="secondary"
-        aria-label="add"
-        className={classes.margin}
-        type="submit"
-        size="small"
+    <div className={classes.addTaskContainer}>
+      <form
+        onSubmit={handleSubmit}
+        className={classes.addTaskForm}
+        noValidate
+        autoComplete="off"
       >
-        <AddIcon />
-      </Fab>
-    </form>
+        <FormControl className={classes.addTaskFormControl}>
+          <InputLabel htmlFor="addTaskInput" className={classes.inputLabelAdd}>
+            New Task
+          </InputLabel>
+          <Input
+            id="addTaskInput"
+            value={values.newTask}
+            className={classes.inputAdd}
+            onChange={handleChange('newTask')}
+          />
+        </FormControl>
+        <Button variant="contained" color="primary" className={classes.addTaskBut} type="submit">
+          Add task
+        </Button>
+      </form>
+    </div>
   );
 };
 
 export default AddTask;
 
-{
-  /*<Button type="submit" variant="contained" color="primary">*/
-}
-{
-  /*    Add task*/
-}
-{
-  /*</Button>*/
-}
+

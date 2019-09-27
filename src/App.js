@@ -4,9 +4,9 @@ import TodoContainer from './components/containers/TodoContainer';
 import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
-
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from './components/theme/theme';
 
 const App = () => {
   return (

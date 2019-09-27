@@ -2,12 +2,11 @@ import React from 'react';
 import AddTask from '../AddTask';
 import TasksList from '../TaskList1';
 import { connect } from 'react-redux';
-import {addTask, deleteTask, updateTask} from '../../redux/actions';
+import { addTask, deleteTask, updateTask } from '../../redux/actions';
+import styles from './TodoContainer.module.css';
 let uuidv4 = require('uuid/v4');
 
-
 const TodoContainer = props => {
-
   const [values, setValues] = React.useState({
     newTask: ''
   });
@@ -18,7 +17,7 @@ const TodoContainer = props => {
 
   const handleAddTask = event => {
     props.addTask(values.newTask, uuidv4());
-    setValues({newTask: ''});
+    setValues({ newTask: '' });
     event.preventDefault();
   };
 
@@ -31,18 +30,20 @@ const TodoContainer = props => {
   };
 
   return (
-    <div>
-      <h1>Todo</h1>
-      <AddTask
-        handleSubmit={handleAddTask}
-        handleChange={handleInputTask}
-        values={values}
-      />
-      <TasksList
-        handleDelete={handleDeleteTask}
-        handleChange={IsDoneTask}
-        tasks={props.tasks}
-      />
+    <div className={styles.content}>
+      <div className={styles.container}>
+        <h1>Todo list</h1>
+        <AddTask
+          handleSubmit={handleAddTask}
+          handleChange={handleInputTask}
+          values={values}
+        />
+        <TasksList
+          handleDelete={handleDeleteTask}
+          handleChange={IsDoneTask}
+          tasks={props.tasks}
+        />
+      </div>
     </div>
   );
 };
